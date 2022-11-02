@@ -26,7 +26,7 @@
 \setplength{firstheadwidth}{\textwidth}
 %% add margin to top
 \newlength{\extratopmargin}
-\setlength{\extratopmargin}{8ex}
+\setlength{\extratopmargin}{10ex}
 \addtoplength{firstheadvpos}{\extratopmargin}
 \addtoplength{toaddrvpos}{\extratopmargin}
 \addtoplength{locvpos}{\extratopmargin}
