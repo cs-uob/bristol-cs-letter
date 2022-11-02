@@ -25,7 +25,12 @@
 %% put addresses and logo within margins
 \setplength{firstheadwidth}{\textwidth}
 %% add margin to top
-\setplength{firstheadvpos}{2cm}
+\newlength{\extratopmargin}
+\setlength{\extratopmargin}{8ex}
+\addtoplength{firstheadvpos}{\extratopmargin}
+\addtoplength{toaddrvpos}{\extratopmargin}
+\addtoplength{locvpos}{\extratopmargin}
+\addtoplength{refvpos}{\extratopmargin}
 
 %% align signature left
 \renewcommand*{\raggedsignature}{\raggedright}
