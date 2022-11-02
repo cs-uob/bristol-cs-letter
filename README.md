@@ -10,3 +10,17 @@ This is a template, so try the "Use this template" button to make a new repo.
 
 Also it uses a submodule for fonts, so clone with
 > git clone --recurse-submodules git@github.com:your-username/your-letter-repo.git
+
+## Windows script for making new letter
+
+The PowerShell script `new-letter.ps1 foo` will deploy the letter template in directory `.\foo`.
+
+This is achieved by cloning from GitHub, and then deleting all the git-related information.
+
+Place it in a directory, e.g. `C:\Users\USERNAME\scripts\`. Then add that
+directory to your path by adding the following command to your PowerShell
+profile (`$profile`):
+
+```
+$env:PATH += ";C:\Users\USERNAME\scripts\"
+```
