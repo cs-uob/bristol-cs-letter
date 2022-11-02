@@ -1,0 +1,60 @@
+\documentclass[
+  fromemail,          %% comment this to hide email
+  fromphone,          %% comment this to hide phone
+  foldmarks=false,    %% comment to make fold marks appear
+]{bristol-cs-letter}
+
+\usepackage{lipsum}
+
+%% -----------------------------------------
+%% Letter options
+%% -----------------------------------------
+
+\setkomavar{fromname}{Alan M. Turing}
+\setkomavar{signature}{%
+  \includegraphics[width=3cm]{sig}\\[3ex]   %% includes your signature + space
+  \usekomavar{fromname}\\                   %% repeats your name here
+  Senior Lecturer in Computation            %% (optionally) position here
+}
+\setkomavar{fromaddress}{%
+  Merchant Venturers Building\\
+  Woodland Road\\
+  Bristol\\
+  BS8 1UB % \\
+%  United Kingdom
+}
+\setkomavar{fromemail}{alex.kavvos@bristol.ac.uk}
+\setkomavar{fromphone}{+44 (0) 1234 1231 1231}
+\setkomavar{date}{28 February 2052} %% according to uni house style
+\setkomavar{subject}{Application for moneyfunds}
+
+\begin{document}
+
+%% -----------------------------------------
+%% Recipient and address
+%% -----------------------------------------
+
+\begin{letter}{
+  EPSRC Manager\\
+  Polaris House\\
+  Swindon
+}
+
+%% -----------------------------------------
+%% Letter content
+%% -----------------------------------------
+
+\opening{Dear Madam or Sir,}
+
+Please give me some research monies.
+
+\lipsum[1-5]
+
+\closing{Yours sincerely} %% Yours faithfully if recipient name unknown.
+
+\encl{Grant application}
+
+\cc{Head of School}
+
+\end{letter}
+\end{document}
