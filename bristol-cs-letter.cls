@@ -13,7 +13,7 @@
   enlargefirstpage,
   firstfoot=false,
   backaddress=false,
-  subject=afteropening,
+  subject=beforeopening,
   version=last
 ]{scrlttr2}
 
@@ -56,5 +56,15 @@
 ]
 \renewcommand{\familydefault}{\sfdefault} %% set main font to be the sans font
 
+
+%% importing brand colours
+
+\RequirePackage{bristol-colours}
+
 %% Hyperref for links
-\RequirePackage{hyperref}
+\RequirePackage[pdfusetitle,hyperfootnotes=false]{hyperref}
+\hypersetup{breaklinks=true, colorlinks=true,
+  linkcolor=UniversityRed,
+  urlcolor=UniversityRed,
+  citecolor=UniversityRed
+}

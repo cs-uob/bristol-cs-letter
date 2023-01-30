@@ -2,6 +2,7 @@
   fromemail,          %% comment this to hide email
   fromphone,          %% comment this to hide phone
   foldmarks=false,    %% comment to make fold marks appear
+  parskip
 ]{bristol-cs-letter}
 
 \usepackage{lipsum}
@@ -26,7 +27,9 @@
 \setkomavar{fromemail}{alex.kavvos@bristol.ac.uk}
 \setkomavar{fromphone}{+44 (0) 1234 1231 1231}
 \setkomavar{date}{28 February 2052} %% according to uni house style
-\setkomavar{subject}{On some unsolvable problems}
+\setkomavar{subject}{
+  On some unsolvable problems
+}
 
 \begin{document}
 
@@ -47,6 +50,8 @@
 \opening{Dear Madam or Sir,}
 
 \lipsum[1-5]
+
+See more information at \href{https://www.cs.bristol.ac.uk}{our website}.
 
 \closing{Yours sincerely} %% Yours faithfully if recipient name unknown.
 
