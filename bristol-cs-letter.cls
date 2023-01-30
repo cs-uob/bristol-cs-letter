@@ -55,3 +55,6 @@
   ItalicFont = HelveticaNeue-RegularItalic.otf
 ]
 \renewcommand{\familydefault}{\sfdefault} %% set main font to be the sans font
+
+%% Hyperref for links
+\RequirePackage{hyperref}
