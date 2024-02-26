@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{bristol-cs-letter}[2022/11/01 Bristol CS letter]
+\ProvidesClass{bristol-cs-letter}[2023/01/30 Bristol CS letter]
 
 
 %% Forward options to scrlttr2
@@ -45,7 +45,7 @@
 %% University logo
 \RequirePackage{graphicx}
 \setkomavar{fromlogo}{
-  \includegraphics[width = 16em]{bristol-logo.png}
+  \includegraphics[width = 16em]{UoB_RGB_24.png}
 }
 
 %% University font
