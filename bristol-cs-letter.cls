@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{bristol-cs-letter}[2023/01/30 Bristol CS letter]
+\ProvidesClass{bristol-cs-letter}[2024/04/04 Bristol CS letter]
 
 
 %% Forward options to scrlttr2
@@ -48,13 +48,16 @@
   \includegraphics[width = 16em]{UoB_RGB_24.png}
 }
 
-%% University font
-\RequirePackage{fontspec}
-\setsansfont[ExternalLocation=helvetica-neue/]{HelveticaNeue-Regular.otf}[
-  BoldFont = HelveticaNeue-Bold.otf,
-  ItalicFont = HelveticaNeue-RegularItalic.otf
-]
-\renewcommand{\familydefault}{\sfdefault} %% set main font to be the sans font
+%% Old University font
+%\RequirePackage{fontspec}
+%\setsansfont[ExternalLocation=helvetica-neue/]{HelveticaNeue-Regular.otf}[
+%  BoldFont = HelveticaNeue-Bold.otf,
+%  ItalicFont = HelveticaNeue-RegularItalic.otf
+%]
+%\renewcommand{\familydefault}{\sfdefault} %% set main font to be the sans font
+
+%% New University font (April 2024 onwards)
+\RequirePackage[sfdefault]{inter}
 
 
 %% importing brand colours
