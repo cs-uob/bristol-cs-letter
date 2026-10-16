@@ -1,10 +1,16 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{bristol-cs-letter}[2024/04/04 Bristol CS letter]
+\ProvidesClass{bristol-cs-letter}[2026/10/16 Bristol CS letter]
 
+
+%% Option: use the black logo instead of the colour one
+\newif\if@uobblacklogo
+\DeclareOption{blacklogo}{\@uobblacklogotrue}
 
 %% Forward options to scrlttr2
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrlttr2}}
 \ProcessOptions\relax
+
+\RequirePackage[british]{babel}
 
 %% KOMA class loading and UK letter options
 \LoadClass[
@@ -18,7 +24,6 @@
 ]{scrlttr2}
 
 %% remove "email" and "phone" words
-%% set font
 \setkomavar*{fromemail}{}
 \setkomavar*{fromphone}{}
 
@@ -40,12 +45,11 @@
 \setplength{toaddrhpos}{\oddsidemargin}
 \addtoplength{toaddrhpos}{1in}
 
-\RequirePackage[british]{babel}
-
-%% University logo
+%% University logo (official vector PDF; artbox crops the A4 page to the logo)
 \RequirePackage{graphicx}
-\setkomavar{fromlogo}{
-  \includegraphics[width = 16em]{UoB_RGB_24.png}
+\setkomavar{fromlogo}{%
+  \includegraphics[width = 16em, pagebox=artbox]{%
+    \if@uobblacklogo UoB_Black_24.pdf\else UoB_RGB_24.pdf\fi}%
 }
 
 %% Old University font
@@ -56,8 +60,12 @@
 %]
 %\renewcommand{\familydefault}{\sfdefault} %% set main font to be the sans font
 
-%% New University font (April 2024 onwards)
-\RequirePackage[sfdefault]{inter}
+%% Previous University font (April 2024 onwards): Inter
+%\RequirePackage[sfdefault]{inter}
+
+%% Current University font: Open Sans
+\RequirePackage[default]{opensans}
+\RequirePackage[T1]{fontenc}
 
 
 %% importing brand colours

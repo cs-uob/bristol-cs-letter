@@ -1,6 +1,7 @@
 \documentclass[
   fromemail,          %% comment this to hide email
   fromphone,          %% comment this to hide phone
+  %% blacklogo,       %% uncomment for the black logo instead of colour
   foldmarks=false,    %% comment to make fold marks appear
   parskip
 ]{bristol-cs-letter}
@@ -24,8 +25,8 @@
   BS8 1UB % \\
 %  United Kingdom
 }
-\setkomavar{fromemail}{alex.kavvos@bristol.ac.uk}
-\setkomavar{fromphone}{+44 (0) 1234 1231 1231}
+\setkomavar{fromemail}{a.turing@bristol.ac.uk}
+\setkomavar{fromphone}{+44 (0) 117 000 0000}
 \setkomavar{date}{28 February 2052} %% according to uni house style
 \setkomavar{subject}{
   On some unsolvable problems
@@ -37,6 +38,7 @@
 %% Recipient and address
 %% -----------------------------------------
 
+%% For no recipient address, use \begin{letter}{\mbox{}} (a plain {} errors).
 \begin{letter}{
   EPSRC Manager\\
   Polaris House\\
