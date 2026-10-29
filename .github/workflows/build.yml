@@ -4,9 +4,15 @@ on:
   push:
   pull_request:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: xu-cheng/latex-action@v3
@@ -16,3 +22,13 @@ jobs:
         with:
           name: main.pdf
           path: main.pdf
+      - uses: softprops/action-gh-release@v2
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        with:
+          tag_name: preview
+          name: Latest PDF preview
+          prerelease: true
+          make_latest: false
+          files: main.pdf
+          overwrite_files: true
+          fail_on_unmatched_files: true

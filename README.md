@@ -8,6 +8,13 @@ Designed to some extent according to the [university brand guidelines](https://u
 
 This is a template, so try the "Use this template" button to make a new repo.
 
+## PDF preview
+
+Every push to `main` builds the example and replaces `main.pdf` in the rolling
+`preview` release. Pull requests build without publishing. After the first
+successful `main` build, the PDF has a stable direct link:
+[Download the example PDF](https://github.com/CS-UoB/bristol-cs-letter/releases/download/preview/main.pdf).
+
 ## Usage
 
 Edit `main.tex` (your name, address, recipient, contents), then run:
