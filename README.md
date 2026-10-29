@@ -8,6 +8,12 @@ Designed to some extent according to the [university brand guidelines](https://u
 
 This is a template, so try the "Use this template" button to make a new repo.
 
+## PDF preview
+
+Pushing a Git tag builds the example and attaches `main.pdf` to a GitHub Release.
+After the first release, the latest PDF has a stable direct link:
+[Download the example PDF](https://github.com/CS-UoB/bristol-cs-letter/releases/latest/download/main.pdf).
+
 ## Usage
 
 Edit `main.tex` (your name, address, recipient, contents), then run:

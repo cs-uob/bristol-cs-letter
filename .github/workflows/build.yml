@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: xu-cheng/latex-action@v3
@@ -16,3 +18,8 @@ jobs:
         with:
           name: main.pdf
           path: main.pdf
+      - uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: main.pdf
+          fail_on_unmatched_files: true
