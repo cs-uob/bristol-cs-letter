@@ -10,9 +10,10 @@ This is a template, so try the "Use this template" button to make a new repo.
 
 ## PDF preview
 
-Pushing a Git tag builds the example and attaches `main.pdf` to a GitHub Release.
-After the first release, the latest PDF has a stable direct link:
-[Download the example PDF](https://github.com/CS-UoB/bristol-cs-letter/releases/latest/download/main.pdf).
+Every push to `main` builds the example and replaces `main.pdf` in the rolling
+`preview` release. Pull requests build without publishing. After the first
+successful `main` build, the PDF has a stable direct link:
+[Download the example PDF](https://github.com/CS-UoB/bristol-cs-letter/releases/download/preview/main.pdf).
 
 ## Usage
 
